@@ -1,0 +1,27 @@
+{
+	"name": "CSV_Archive",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Blob_Storage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@formatDateTime(addMinutes(utcNow(), 330), 'yyyy-MM-dd @HH:mm:ss')\n",
+					"type": "Expression"
+				},
+				"container": "archive"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

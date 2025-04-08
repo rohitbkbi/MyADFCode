@@ -1,0 +1,6 @@
+{
+	"name": "IR-SSMS",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

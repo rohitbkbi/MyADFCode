@@ -1,0 +1,49 @@
+{
+	"name": "PL_Master",
+	"properties": {
+		"activities": [
+			{
+				"name": "SSMS_RAW",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "RAW_ARCV_DLT",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_SSMS_To_RAW",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": false
+				}
+			},
+			{
+				"name": "RAW_ARCV_DLT",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Pipeline_Archive",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": false
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-03-19T10:20:10Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
