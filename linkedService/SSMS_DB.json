@@ -1,0 +1,21 @@
+{
+	"name": "SSMS_DB",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "INFAHMLPT0034",
+			"database": "AdventureWorks2022",
+			"encrypt": "optional",
+			"trustServerCertificate": true,
+			"authenticationType": "Windows",
+			"userName": "inferenz\\rohit.gaddamidi",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlYWUzOWY5OS0zMTJmLTRhMzctYjBhZC04ZjJiZjRjODRkYWEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IR-SSMS",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
