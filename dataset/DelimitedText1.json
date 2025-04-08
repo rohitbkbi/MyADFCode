@@ -1,0 +1,28 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Healthcare Database.xlsx",
+				"container": "adfdemo"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u0000\u0000\u0000!\u0000\u001f�]��\u0000\u0000\u0000�\u0001\u0000\u0000\u0010\u0000\u0000\u0000docProps/app.xml��MO�0\f��H��(�5\u0019H\u0013��L�K\\&8�ݣ��\"Z;J���{\f\u0013\u0005q�f��\u001f��ٌC/N�r ���R\u0000zj\u0002v�|�?.n���a�zB��\u0004Yn��yI\u0014!�\u0000Y0\u0002s-��ĵR�\u001fap�b\u0019Yi)",
+				"type": "String"
+			}
+		]
+	}
+}
